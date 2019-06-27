@@ -1,0 +1,19 @@
+{
+  "name": "myytdl",
+  "version": "1.0.0",
+  "description": "my Youtube downloader using ytdl",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DPS0340/myYtdl.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DPS0340/myYtdl/issues"
+  },
+  "homepage": "https://github.com/DPS0340/myYtdl#readme"
+}
