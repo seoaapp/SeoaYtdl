@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DPS0340/myYtdl.git"
+    "url": "git+https://github.com/seoaapp/SeoaYtdl.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DPS0340/myYtdl/issues"
+    "url": "https://github.com/seoaapp/SeoaYtdl/issues"
   },
-  "homepage": "https://github.com/DPS0340/myYtdl#readme",
+  "homepage": "https://github.com/seoaapp/SeoaYtdl#readme",
   "dependencies": {
     "command-line-args": "^5.1.1",
     "fluent-ffmpeg": "^2.1.2",
