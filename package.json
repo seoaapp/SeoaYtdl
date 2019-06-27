@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/DPS0340/myYtdl#readme",
   "dependencies": {
+    "command-line-args": "^5.1.1",
+    "fs": "0.0.1-security",
     "ytdl-core": "^0.29.2"
   }
 }
