@@ -15,13 +15,11 @@ if (options['help'] == true) {
     console.log("node main.js -p PATH(optional) -l youtube_link(s)");
 }
 
-
-console.log(process.argv);
-
 let link = options['link'];
 
 let path = options['path'] || "./video/";
 
+fs.existsSync(path) || fs.mkdirSync(path);
 
 let index = 0;
 let size = link.length;
