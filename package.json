@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DPS0340/myYtdl/issues"
   },
-  "homepage": "https://github.com/DPS0340/myYtdl#readme"
+  "homepage": "https://github.com/DPS0340/myYtdl#readme",
+  "dependencies": {
+    "ytdl-core": "^0.29.2"
+  }
 }
