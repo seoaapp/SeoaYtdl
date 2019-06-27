@@ -1,2 +1,2 @@
-# myYtdl
-my Youtube downloader using ytdl
+# SeoaYtdl
+Seoa Youtube downloader using ytdl
