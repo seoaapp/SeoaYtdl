@@ -7,9 +7,12 @@ const optionDefinitions = [
 
 const fs = require('fs');
 const ytdl = require('ytdl-core');
+const ffmpeg = require('fluent-ffmpeg');
 
 const commandLineArgs = require('command-line-args');
 const options = commandLineArgs(optionDefinitions);
+
+
 
 if (options['help'] == true) {
     console.log("node main.js -p PATH(optional) -l youtube_link(s)");
@@ -28,8 +31,19 @@ link.forEach(video => {
     ytdl.getInfo(video, (err, info) => {
         if (err) throw err;
         index += 1;
-        console.log("downloading " + info['title'] + "!");
-        ytdl(video, { quality: 'highest',  filter: (format) => format.container === 'mp4' }).pipe(fs.createWriteStream(path + info['title'] + '.mp4'));
-        console.log(index + "/" + size +" complete!");
+        console.log("downloading " + info['title'] + " as " + info['video_id'] + "!");
+        ytdl(video, { quality: 137 }).pipe(fs.createWriteStream(path + info['video_id'] + '_videoonly.mp4')).on("finish", ()=> {
+            ytdl(video, { quality: 140 }).pipe(fs.createWriteStream(path + info['video_id'] + '_audioonly.m4a')).on("finish", ()=>{
+                ffmpeg()
+                    .mergeAdd(path + info['video_id'] + '_videoonly.mp4')
+                    .mergeAdd(path + info['video_id'] + '_audioonly.m4a')
+                    .on("end", ()=>{
+                        fs.unlinkSync(path + info['video_id'] + '_videoonly.mp4');
+                        fs.unlinkSync(path + info['video_id'] + '_audioonly.m4a');
+                        console.log(index + "/" + size + " complete!");
+                    })
+                    .save(path + info['video_id'] + '.mp4');
+            })
+        })
     });
 });
