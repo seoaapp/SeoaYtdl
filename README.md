@@ -7,7 +7,7 @@ requirement: node.js and npm, ffmpeg
 
 ```npm install```
 
-it needs ffmpeg to wrap audio.
+it needs ffmpeg to wrap video to audio.
 
 we recommend install ffmpeg with package manager. (ubuntu: apt, windows: choco etc..) 
 
