@@ -7,7 +7,10 @@ const optionDefinitions = [
 
 const fs = require('fs');
 const ytdl = require('ytdl-core');
+const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
 const ffmpeg = require('fluent-ffmpeg');
+ffmpeg.setFfmpegPath(ffmpegPath);
+
 
 const commandLineArgs = require('command-line-args');
 const options = commandLineArgs(optionDefinitions);

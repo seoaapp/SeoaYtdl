@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/seoaapp/SeoaYtdl#readme",
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.18",
     "command-line-args": "^5.1.1",
     "fluent-ffmpeg": "^2.1.2",
     "fs": "0.0.1-security",

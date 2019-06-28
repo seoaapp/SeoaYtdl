@@ -3,13 +3,9 @@ Seoa Youtube downloader using ytdl
 
 ## Installation
 
-requirement: node.js and npm, ffmpeg
+requirement: node.js and npm
 
-```npm install```
-
-it needs ffmpeg to wrap video to audio.
-
-we recommend install ffmpeg with package manager. (ubuntu: apt, windows: choco etc..) 
+all you need is ```npm install```
 
 ## run
 ```node main.js -p PATH(optional) -l youtube_link(s)```
